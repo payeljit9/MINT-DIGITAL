@@ -1,0 +1,203 @@
+*{box-sizing: border-box;}/*This makes sure that the padding and border are included in the total width and height of the elements.*/
+
+/*==================== body ============================*/
+body{ 
+      width: 100%;
+      min-width: 320px;
+      max-width: 1200px;
+      margin: 0 auto;
+      color: #707070;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+     
+   }
+
+
+a{ text-decoration: none; color:#707086; } /* to remove the underline of all a element  */
+
+.green { color:#00ca53;font-weight: bold; }/* this special class is to style the green texts */
+
+.gray{ color:#707086;font-weight: bold; }
+#logo{ margin-top: 20px;}
+
+h1{ font-size: 26px; color: #303037}
+h3{ font-size: 20px;}
+
+/* wrap */
+.wrap{margin-top: 80px;}
+
+/* to do list in main content */
+#to-do-list li{
+margin-bottom: 20px;    
+}
+
+/* the following style is for the line under header area */
+#ruller, #border-top{
+    width:113%; 
+    margin-left:-7%; 
+    margin-top:5px; 
+    border:1px solid rgba(59,59,59,.1);
+}
+#border-top{
+    margin-top:0; 
+    border:2px solid #00ca53;
+
+} 
+/* ========================== grid ==========================*/
+/* each row style*/
+.row {
+   
+    padding: 10px;
+    width: 100%;
+    min-height: 1px;
+    float:left;
+}
+/* each column style */
+.col{
+    /* background-color: grey;*/
+    min-height: 40px;
+    border-radius: 8px;
+    margin-left: 2.4%; /* each column left and right will have margin 2.4%*/
+    margin-right: 2.4%;
+    display: inline-block;
+    float: left;
+}
+
+.col:first-child{
+    margin-left: 0px; /* first  colum within a row will have 0 margin on left*/
+}
+.col:last-child{
+    margin-right: 0px;/* last  colum within a row will have 0 margin on right*/
+}
+
+/* each column one to twelve */
+.col.one   {width: 3.93%;}
+.col.two   {width: 12.66%;}
+.col.three {width: 21.4%;}
+.col.four  {width: 30.13%;}
+.col.five  {width: 38.865%;}
+.col.six   {width: 47.6%;}/* (100(width 100%) - 2.4{col mar left} - 2.4 {col mar right}) / 2 (total 2 column)*/
+.col.seven {width: 56.333%;}
+.col.eight {width: 65.07%;}
+.col.nine  {width: 73.8%;}
+.col.ten   {width: 82.533%;}
+.col.eleven{width: 91.27%;}
+.col.twelve{width: 100%;}
+/* following line is for screen size 768px, width should be 100% in screen size 768px*/
+@media (max-width: 768px){
+    .col{
+        width: 100% !important;
+        margin: 5px 0 5px 0; /* margin top & bottom 5px, left and right 0  in the screen size 768px */
+    } 
+}
+
+/* ========================side bar=========================== */
+/* sidebar style */
+.cust-stl{
+    width: 250px;
+    height: 50px;
+    background-color:#00ca53;font-weight: bold;;
+    margin-bottom: 20px;
+    border-radius: 1px;
+    padding: 10px;
+    color:white;
+    font-weight: bold;
+    margin-top: 25px;
+}
+/* plus sign style */
+#plus, #plus2, #plus3{
+    float: right;
+}
+/* minus sign */
+#minus, #minus2, #minus3{ 
+    display: none; 
+    float: right;
+}
+/* inside the sidebar area*/
+#side-one, #side-two, #side-three{
+    display: none;
+    width: 250px;
+    height: auto;
+    border: 1px solid #d4d3d3;
+    margin-top: -20px;
+    padding: 10px;
+    overflow: scroll;
+}
+
+/* =========================navigation======================*/
+#navigation{
+     /* border-bottom: 1px solid #d4d3d3;
+      margin-bottom: 50px;*/
+}
+#navigation ul{
+    margin-left: 50%;/*  push the menu towards the right */
+}
+#navigation ul li{
+    display: inline;/* to make the list items in one line */
+    font-size: 20px;
+    float:left;
+    padding: 8px;
+    
+    
+}
+/* on mouse hover border bottom of the each menu */
+#navigation ul li a:hover{
+ 
+ border-bottom: 5px solid #00ca53;
+ padding-top: 10px;   
+}
+/* green border bottom active stage */
+#active{
+    border-bottom: 5px solid #00ca53;
+    padding-top: 10px;     
+    
+} /* this line is to give a border of first li element  */
+/* in screen size 768 the navbar will follow the following code */
+@media (max-width: 768px){
+    /* to push the list items to the left in this scren*/
+    #navigation ul li{
+     float: left; 
+     padding: 2px;
+     font-size: 18px;
+     margin-left: -40px;
+    margin-right: 45px;
+    }
+    /* to push the ul (menu) to the left in this scren*/
+    #navigation ul{
+    margin-left: 0;
+}
+    /* h1 font size will be reduces to 16px */
+    h1{
+   
+     font-size: 16px;
+     
+    }
+}
+
+/*#navigation ul li a:active{
+    border-bottom: 5px solid #00ca53;
+}*/
+
+/* ==============================footer==============================*/
+footer ul li{
+   display: inline;
+   padding: 20px;
+   position: relative;
+   left: 32%;
+   
+   
+}
+footer img{
+ width: 30px;
+ height: 30px;
+    
+
+}
+@media (max-width: 768px){
+    footer ul li{
+   
+   position: relative; 
+   left: 0;/* to make the logo margin-left 0 in this screen size */
+     
+    }
+}
